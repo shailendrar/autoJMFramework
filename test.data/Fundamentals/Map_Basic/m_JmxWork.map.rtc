@@ -1,0 +1,416 @@
+{
+  "name" : "m_JmxWork",
+  "description" : "",
+  "entryPoint" : "m_JmxWork.map",
+  "logLevel" : "INFO",
+  "logfileName" : "C:\\Users\\shailendra.r\\Actian\\DataConnect\\Logs\\DataConnect.log",
+  "flushLog" : false,
+  "clearLog" : true,
+  "macroSetNames" : [ "Fundamentals" ],
+  "profiling" : false,
+  "macroDefinitions" : [ ],
+  "datasetConfigs" : {
+    "namedDatasets" : [ {
+      "name" : "SOURCE_1",
+      "schemaMismatchOption" : "error",
+      "dataset" : {
+        "session_info" : {
+          "type" : "source",
+          "connector" : "ASCII (Delimited)"
+        },
+        "connect_info" : {
+          "parts" : [ {
+            "name" : "file",
+            "value" : "$(Fundamentals_Data_In)/src_orders.txt"
+          } ],
+          "properties" : [ {
+            "name" : "codepage",
+            "value" : "ANSI"
+          }, {
+            "name" : "recsep",
+            "value" : "CR-LF"
+          }, {
+            "name" : "fieldcount",
+            "value" : "0"
+          }, {
+            "name" : "fldsep",
+            "value" : ","
+          }, {
+            "name" : "fldsdelim",
+            "value" : "\""
+          }, {
+            "name" : "fldedelim",
+            "value" : "\""
+          }, {
+            "name" : "header",
+            "value" : "True"
+          }, {
+            "name" : "altfldsep",
+            "value" : "None"
+          }, {
+            "name" : "soffset",
+            "value" : "0"
+          }, {
+            "name" : "autostyle",
+            "value" : "False"
+          }, {
+            "name" : "stylesamplesize",
+            "value" : "5000"
+          }, {
+            "name" : "lstrip",
+            "value" : "False"
+          }, {
+            "name" : "tstrip",
+            "value" : "False"
+          }, {
+            "name" : "field1isrectypeid",
+            "value" : "False"
+          }, {
+            "name" : "nullind",
+            "value" : "none"
+          }, {
+            "name" : "emptyfieldsnull",
+            "value" : "False"
+          }, {
+            "name" : "numericformatnormalization",
+            "value" : "False"
+          } ]
+        },
+        "schema_info" : {
+          "schema" : {
+            "root_defs" : [ {
+              "name" : "DocumentRoot",
+              "max_occurs" : "unbounded",
+              "choice" : [ {
+                "name" : "R1",
+                "rec_type_ref" : "R1"
+              } ]
+            } ],
+            "type_defs" : [ {
+              "name" : "R1",
+              "groups" : [ {
+                "name" : "R1",
+                "sequence" : [ {
+                  "name" : "ACCOUNT_NO",
+                  "type" : "string",
+                  "length" : 5,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "FIRST_NAME",
+                  "type" : "string",
+                  "length" : 9,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "LAST_NAME",
+                  "type" : "string",
+                  "length" : 10,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "COMPANY",
+                  "type" : "string",
+                  "length" : 31,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "ADDRESS",
+                  "type" : "string",
+                  "length" : 27,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "CITY",
+                  "type" : "string",
+                  "length" : 12,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "STATE",
+                  "type" : "string",
+                  "length" : 2,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "ZIPCODE",
+                  "type" : "string",
+                  "length" : 10,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "ORDER_NO",
+                  "type" : "string",
+                  "length" : 4,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "ORDER_AMT",
+                  "type" : "string",
+                  "length" : 6,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "ORDER_DATE",
+                  "type" : "string",
+                  "length" : 10,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "ORDER_ITEM1",
+                  "type" : "string",
+                  "length" : 3,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                }, {
+                  "name" : "EMAIL",
+                  "type" : "string",
+                  "length" : 24,
+                  "external" : {
+                    "type" : "Text"
+                  }
+                } ]
+              } ]
+            } ],
+            "rule_defs" : { },
+            "artifact_metadata" : { }
+          }
+        },
+        "sample_info" : {
+          "type" : "All",
+          "start" : 0,
+          "end" : 0
+        }
+      }
+    }, {
+      "name" : "TARGET_1",
+      "schemaMismatchOption" : "error",
+      "dataset" : {
+        "session_info" : {
+          "type" : "target",
+          "connector" : "ASCII (Delimited)"
+        },
+        "connect_info" : {
+          "parts" : [ {
+            "name" : "file",
+            "value" : "$(Fundamentals_Data_Out)/out_Orders.txt"
+          }, {
+            "name" : "outputmode",
+            "value" : "REPLACE"
+          } ],
+          "properties" : [ {
+            "name" : "codepage",
+            "value" : "ANSI"
+          }, {
+            "name" : "recsep",
+            "value" : "CR-LF"
+          }, {
+            "name" : "fldsep",
+            "value" : ","
+          }, {
+            "name" : "fldsdelim",
+            "value" : "\""
+          }, {
+            "name" : "fldedelim",
+            "value" : "\""
+          }, {
+            "name" : "header",
+            "value" : "True"
+          }, {
+            "name" : "delimit",
+            "value" : "all"
+          }, {
+            "name" : "lstrip",
+            "value" : "True"
+          }, {
+            "name" : "tstrip",
+            "value" : "True"
+          }, {
+            "name" : "srcxlit",
+            "value" : ""
+          }, {
+            "name" : "trgxlit",
+            "value" : ""
+          }, {
+            "name" : "maxdatalen",
+            "value" : "0"
+          }, {
+            "name" : "nullind",
+            "value" : "none"
+          } ]
+        },
+        "schema_info" : {
+          "schema" : {
+            "root_defs" : [ {
+              "name" : "DocumentRoot",
+              "max_occurs" : "unbounded",
+              "choice" : [ {
+                "name" : "R1",
+                "rec_type_ref" : "R1"
+              } ]
+            } ],
+            "type_defs" : [ {
+              "name" : "R1",
+              "groups" : [ {
+                "name" : "R1",
+                "sequence" : [ {
+                  "name" : "ACCOUNT_NO",
+                  "type" : "string",
+                  "length" : 5,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "FIRST_NAME",
+                  "type" : "string",
+                  "length" : 9,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "LAST_NAME",
+                  "type" : "string",
+                  "length" : 10,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "COMPANY",
+                  "type" : "string",
+                  "length" : 31,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "ADDRESS",
+                  "type" : "string",
+                  "length" : 27,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "CITY",
+                  "type" : "string",
+                  "length" : 12,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "STATE",
+                  "type" : "string",
+                  "length" : 2,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "ZIPCODE",
+                  "type" : "string",
+                  "length" : 10,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "ORDER_NO",
+                  "type" : "string",
+                  "length" : 4,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "ORDER_AMT",
+                  "type" : "string",
+                  "length" : 6,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "ORDER_DATE",
+                  "type" : "string",
+                  "length" : 10,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "ORDER_ITEM1",
+                  "type" : "string",
+                  "length" : 3,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "EMAIL",
+                  "type" : "string",
+                  "length" : 24,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                } ]
+              } ]
+            } ],
+            "rule_defs" : { },
+            "artifact_metadata" : { }
+          }
+        },
+        "sample_info" : {
+          "type" : "All",
+          "start" : 0,
+          "end" : 0
+        }
+      }
+    } ],
+    "namedSessions" : [ ]
+  },
+  "transformOptions" : {
+    "nullOption" : "IGNORE",
+    "truncationOption" : "IGNORE",
+    "overflowOption" : "IGNORE"
+  },
+  "profile_mask" : 65535,
+  "profile_output_file" : "C:\\Temp\\BangloreTraining\\P14_JMXwork\\Output\\profile.out",
+  "artifact_metadata" : {
+    "description" : "",
+    "creator" : "INDECOMM\\shailendra.r",
+    "author" : "INDECOMM\\shailendra.r",
+    "version" : "1.7",
+    "date_created" : "2019-01-24T18:29:42.065291+05:30",
+    "date_modified" : "2019-01-24T18:45:44.384+05:30"
+  }
+}

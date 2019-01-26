@@ -1,0 +1,90 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.Actian.DataConnect</groupId>
+	<artifactId>test.build</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>test.build</name>
+	<description>Main Maven project</description>
+	<properties>
+		<jmeter.plugin.version>2.1.0</jmeter.plugin.version>
+		<!-- The following property is ONLY used when executing in remote test 
+			mode -->
+		<jmeter.server.list>localhost</jmeter.server.list>
+	</properties>
+
+	<modules>
+		<module>SmokeSuite</module>
+		<module>SanitySuite</module>
+	</modules>
+
+	<profiles>
+		<profile>
+			<id>test-local</id>
+			<properties>
+				<test.dir>${maven.multiModuleProjectDirectory}/../test.data</test.dir>
+			</properties>
+
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>com.lazerycode.jmeter</groupId>
+							<artifactId>jmeter-maven-plugin</artifactId>
+							<version>${jmeter.plugin.version}</version>
+							<executions>
+								<execution>
+									<id>jmeter-tests</id>
+									<goals>
+										<goal>jmeter</goal>
+									</goals>
+									<configuration>
+										<tasks>
+											<echo>Using Local Profile and goal jmeter</echo>
+										</tasks>
+									
+									</configuration>
+								</execution>
+							</executions>
+							<configuration>							
+								<suppressJMeterOutput>false</suppressJMeterOutput>
+								<ignoreResultFailures>false</ignoreResultFailures>	
+								<scanResultsForFailedRequests>true</scanResultsForFailedRequests>	
+								<errorRateThresholdInPercent>10</errorRateThresholdInPercent>		
+								<overrideRootLogLevel>DEBUG</overrideRootLogLevel>				
+								<downloadExtensionDependencies>false</downloadExtensionDependencies>
+								<jmeterExtensions>
+									<jmeterExtension>kg.apc:jmeter-plugins-perfmon:2.1</jmeterExtension>
+			                        <artifact>kg.apc:jmeter-plugins-standard:jar:1.4.0</artifact>
+			                        <!-- artifact>kg.apc:jmeter-plugins-webdriver:jar:1.4.0</artifact-->
+			                        <artifact>kg.apc:jmeter-plugins-extras:jar:1.4.0</artifact>
+			                        <artifact>kg.apc:jmeter-plugins-extras-libs:jar:1.4.0</artifact>
+			                        <artifact>kg.apc:cmdrunner:2.2.1</artifact>
+			                         <artifact>kg.apc:jmeter-plugins-graphs-additional:jar:2.0</artifact>
+			                    </jmeterExtensions>																		
+								<!-- Temporarily exclude djengine_run_process.jmx to see how the 
+									Jenkins Performance plugin will respond -->								
+								<testFilesExcluded>
+									<excludeJMeterTestFile>djengine_run_process.jmx</excludeJMeterTestFile>
+								</testFilesExcluded>
+								<propertiesSystem>
+									<test.dir>${test.dir}</test.dir>
+								</propertiesSystem>
+								<resultsFileFormat>xml</resultsFileFormat>
+								<testResultsTimestamp>true</testResultsTimestamp>
+								<ignoreResultFailures>false</ignoreResultFailures>
+								<suppressJMeterOutput>false</suppressJMeterOutput>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>	
+	
+</project>

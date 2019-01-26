@@ -1,0 +1,364 @@
+{
+  "map" : {
+    "sources" : [ {
+      "name" : "SOURCE_1",
+      "description" : "",
+      "properties" : [ {
+        "name" : "schema_mismatch",
+        "value" : "error"
+      } ],
+      "control_links" : [ {
+        "src_path" : "/SOURCE_1/R1",
+        "trg_paths" : [ {
+          "rules" : [ {
+            "condition" : "",
+            "if_actions" : [ {
+              "parameters" : [ {
+                "name" : "preserve",
+                "value" : "False"
+              }, {
+                "name" : "count_expression",
+                "value" : ""
+              } ],
+              "name" : "OutputRecord"
+            } ],
+            "map_event" : {
+              "name" : "RecordStarted"
+            }
+          } ],
+          "trg_path" : "/TARGET_1/R1"
+        } ]
+      } ],
+      "schema" : {
+        "root_defs" : [ {
+          "name" : "DocumentRoot",
+          "max_occurs" : "unbounded",
+          "choice" : [ {
+            "name" : "R1",
+            "rec_type_ref" : "R1"
+          } ]
+        } ],
+        "type_defs" : [ {
+          "name" : "R1",
+          "groups" : [ {
+            "name" : "R1",
+            "sequence" : [ {
+              "name" : "ACCOUNT_NO",
+              "type" : "string",
+              "length" : 5,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "type" : "string",
+              "length" : 9,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "type" : "string",
+              "length" : 10,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "COMPANY",
+              "type" : "string",
+              "length" : 31,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "ADDRESS",
+              "type" : "string",
+              "length" : 27,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "CITY",
+              "type" : "string",
+              "length" : 12,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "STATE",
+              "type" : "string",
+              "length" : 2,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "ZIPCODE",
+              "type" : "string",
+              "length" : 10,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "ORDER_NO",
+              "type" : "string",
+              "length" : 4,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "ORDER_AMT",
+              "type" : "string",
+              "length" : 6,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "type" : "string",
+              "length" : 10,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "ORDER_ITEM1",
+              "type" : "string",
+              "length" : 3,
+              "external" : {
+                "type" : "Text"
+              }
+            }, {
+              "name" : "EMAIL",
+              "type" : "string",
+              "length" : 24,
+              "external" : {
+                "type" : "Text"
+              }
+            } ]
+          } ]
+        } ],
+        "rule_defs" : { },
+        "artifact_metadata" : { }
+      }
+    } ],
+    "targets" : [ {
+      "name" : "TARGET_1",
+      "description" : "",
+      "properties" : [ {
+        "name" : "multimode_target",
+        "value" : "false"
+      }, {
+        "name" : "schema_mismatch",
+        "value" : "error"
+      } ],
+      "schema" : {
+        "root_defs" : [ {
+          "name" : "DocumentRoot",
+          "max_occurs" : "unbounded",
+          "choice" : [ {
+            "name" : "R1",
+            "rec_type_ref" : "R1"
+          } ]
+        } ],
+        "type_defs" : [ {
+          "name" : "R1",
+          "groups" : [ {
+            "name" : "R1",
+            "sequence" : [ {
+              "name" : "ACCOUNT_NO",
+              "type" : "string",
+              "length" : 5,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "type" : "string",
+              "length" : 9,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "type" : "string",
+              "length" : 10,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "COMPANY",
+              "type" : "string",
+              "length" : 31,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "ADDRESS",
+              "type" : "string",
+              "length" : 27,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "CITY",
+              "type" : "string",
+              "length" : 12,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "STATE",
+              "type" : "string",
+              "length" : 2,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "ZIPCODE",
+              "type" : "string",
+              "length" : 10,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "ORDER_NO",
+              "type" : "string",
+              "length" : 4,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "ORDER_AMT",
+              "type" : "string",
+              "length" : 6,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "type" : "string",
+              "length" : 10,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "ORDER_ITEM1",
+              "type" : "string",
+              "length" : 3,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "EMAIL",
+              "type" : "string",
+              "length" : 24,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            } ]
+          } ]
+        } ],
+        "rule_defs" : { },
+        "artifact_metadata" : { }
+      },
+      "map_rules" : {
+        "data_links" : [ {
+          "src_path" : "/SOURCE_1/R1/ACCOUNT_NO",
+          "trg_path" : "/TARGET_1/R1/ACCOUNT_NO",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/FIRST_NAME",
+          "trg_path" : "/TARGET_1/R1/FIRST_NAME",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/LAST_NAME",
+          "trg_path" : "/TARGET_1/R1/LAST_NAME",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/COMPANY",
+          "trg_path" : "/TARGET_1/R1/COMPANY",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/ADDRESS",
+          "trg_path" : "/TARGET_1/R1/ADDRESS",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/CITY",
+          "trg_path" : "/TARGET_1/R1/CITY",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/STATE",
+          "trg_path" : "/TARGET_1/R1/STATE",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/ZIPCODE",
+          "trg_path" : "/TARGET_1/R1/ZIPCODE",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/ORDER_NO",
+          "trg_path" : "/TARGET_1/R1/ORDER_NO",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/ORDER_AMT",
+          "trg_path" : "/TARGET_1/R1/ORDER_AMT",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/ORDER_DATE",
+          "trg_path" : "/TARGET_1/R1/ORDER_DATE",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/ORDER_ITEM1",
+          "trg_path" : "/TARGET_1/R1/ORDER_ITEM1",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/R1/EMAIL",
+          "trg_path" : "/TARGET_1/R1/EMAIL",
+          "ui_generated" : false
+        } ]
+      }
+    } ],
+    "execution_options" : [ {
+      "name" : "overflow",
+      "value" : "ignore"
+    }, {
+      "name" : "truncation",
+      "value" : "ignore"
+    }, {
+      "name" : "nulls",
+      "value" : "ignore"
+    } ],
+    "artifact_metadata" : {
+      "description" : "",
+      "creator" : "INDECOMM\\shailendra.r",
+      "author" : "INDECOMM\\shailendra.r",
+      "version" : "1.7",
+      "date_created" : "2019-01-24T18:29:42.065291+05:30",
+      "date_modified" : "2019-01-24T18:45:44.384+05:30"
+    }
+  }
+}

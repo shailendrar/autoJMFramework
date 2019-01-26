@@ -1,0 +1,279 @@
+{
+  "macroSet" : [ {
+    "id" : 1,
+    "name" : "GLOBAL",
+    "macros" : {
+      "macro" : [ {
+        "id" : 1,
+        "name" : "SAMPLES",
+        "value" : "D:/Local_JmeterFramework/test.build/test.data",
+        "encryptValue" : false,
+        "description" : "Path to the DataConnect Samples directory"
+      } ]
+    }
+  }, {
+    "id" : 2,
+    "name" : "Ingres",
+    "macros" : {
+      "macro" : [ {
+        "id" : 2,
+        "name" : "Ingres_SQL_User",
+        "value" : "actian",
+        "encryptValue" : false,
+        "description" : "Ingres Database User. This is the \"From\" database User. Used in x100 Sample."
+      }, {
+        "id" : 3,
+        "name" : "Ingres_SQL_DSN",
+        "value" : "odbcDEMODB",
+        "encryptValue" : false,
+        "description" : "Ingres ODBC Data Source Name. This is the \"From\" DSN. Used in x100 Sample."
+      }, {
+        "id" : 4,
+        "name" : "Ingres_SQL_Db",
+        "value" : "demodb",
+        "encryptValue" : false,
+        "description" : "Ingres Datatabase Name. This is the \"From\" database Name. Used in x100 Sample."
+      }, {
+        "id" : 5,
+        "name" : "Ingres_SQL_Pwd",
+        "value" : "actian",
+        "encryptValue" : false,
+        "description" : "Ingres Database Password. This is the \"From\" database Password. Used in x100 Sample. "
+      }, {
+        "id" : 6,
+        "name" : "Ingres_Logs",
+        "value" : "$(SAMPLES)/IngresConnect/Logs",
+        "encryptValue" : false,
+        "description" : "Location for Ingres sample maps and process logs. Used in x100 Sample."
+      }, {
+        "id" : 7,
+        "name" : "Ingres_Data_Out",
+        "value" : "$(SAMPLES)/IngresConnect/Data/Out",
+        "encryptValue" : false,
+        "description" : "Ingres Output directory.  Used in x100 Sample."
+      }, {
+        "id" : 8,
+        "name" : "Ingres_Data_In",
+        "value" : "$(SAMPLES)/IngresConnect/Data/In",
+        "encryptValue" : false,
+        "description" : "Ingres source file directory.  Not used in x100 Sample."
+      } ]
+    }
+  }, {
+    "id" : 3,
+    "name" : "Vector",
+    "macros" : {
+      "macro" : [ {
+        "id" : 9,
+        "name" : "Vector_table",
+        "value" : "d1",
+        "encryptValue" : false,
+        "description" : "Vector Datatabase table name. This is the \"To\" database table in the x100 Sample."
+      }, {
+        "id" : 10,
+        "name" : "Vector_Db",
+        "value" : "demodb",
+        "encryptValue" : false,
+        "description" : "Vector Datatabase Name. This is the \"To\" database Name. Used in x100 Sample."
+      }, {
+        "id" : 11,
+        "name" : "Vector_DSN",
+        "value" : "odbcDEMODB",
+        "encryptValue" : false,
+        "description" : "Vector ODBC Data Source Name.  This is the DSN for the \"To\" database in x100 Sample."
+      }, {
+        "id" : 12,
+        "name" : "Vector_User1",
+        "value" : "actian",
+        "encryptValue" : false
+      }, {
+        "id" : 13,
+        "name" : "Vector_Pwd1",
+        "value" : "actian",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 14,
+        "name" : "Vector_User2",
+        "value" : "qetester",
+        "encryptValue" : false
+      }, {
+        "id" : 15,
+        "name" : "Vector_Pwd2",
+        "value" : "test800",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 4,
+    "name" : "Fundamentals",
+    "macros" : {
+      "macro" : [ {
+        "id" : 16,
+        "name" : "Fundamentals_Logs",
+        "value" : "$(SAMPLES)/Fundamentals/Logs",
+        "encryptValue" : false,
+        "description" : "Log location for Fundamental samples"
+      }, {
+        "id" : 17,
+        "name" : "Fundamentals_Data_In",
+        "value" : "$(SAMPLES)/Fundamentals/Data/In",
+        "encryptValue" : false,
+        "description" : "Location for Fundamental samples input files"
+      }, {
+        "id" : 18,
+        "name" : "Fundamentals_Data_Out",
+        "value" : "$(SAMPLES)/Fundamentals/Data/Out",
+        "encryptValue" : false,
+        "description" : "Location for Fundamental samples output files"
+      }, {
+        "id" : 19,
+        "name" : "NASA_URL",
+        "value" : "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+        "encryptValue" : false,
+        "description" : "URL used in Rest API Invoker sample"
+      }, {
+        "id" : 20,
+        "name" : "ODBC_DSN",
+        "value" : "odbcDEMODB",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 21,
+        "name" : "ODBC_UID",
+        "value" : "qetester",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 22,
+        "name" : "ODBC_PWD",
+        "value" : "test800",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 23,
+        "name" : "DB210_DSN",
+        "value" : "sample",
+        "encryptValue" : false
+      }, {
+        "id" : 24,
+        "name" : "DB210_UID",
+        "value" : "qetester",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 25,
+        "name" : "DB210_PWD",
+        "value" : "test800",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 26,
+        "name" : "EDI_SRC",
+        "value" : "$(SAMPLES)/Fundamentals/Data/EDI",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 27,
+        "name" : "ORA12DSN",
+        "value" : "QADB7",
+        "encryptValue" : false
+      }, {
+        "id" : 28,
+        "name" : "ORA12UID",
+        "value" : "SCOTT",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 29,
+        "name" : "ORA12PWD",
+        "value" : "tiger",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 30,
+        "name" : "FTPServer",
+        "value" : "qadb2:21",
+        "encryptValue" : false
+      }, {
+        "id" : 31,
+        "name" : "FTPUserID",
+        "value" : "anonymous",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 32,
+        "name" : "ORA12ODBC_DSN",
+        "value" : "ORACLE12C",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 33,
+        "name" : "SQL2016Server",
+        "value" : "qadb8.actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 34,
+        "name" : "SQL2016DB",
+        "value" : "qadb8",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 35,
+        "name" : "SQL2016UID",
+        "value" : "qetester",
+        "encryptValue" : false
+      }, {
+        "id" : 36,
+        "name" : "SQL2016PWD",
+        "value" : "test800",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 37,
+        "name" : "EmailSVR",
+        "value" : "usau-qamail01.actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 38,
+        "name" : "EmailUID",
+        "value" : "qetester",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 39,
+        "name" : "EmailPWD",
+        "value" : "test800",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 40,
+        "name" : "EmailFROM",
+        "value" : "qetester@usau-qamail01.actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 41,
+        "name" : "EmailTO",
+        "value" : "qetester@usau-qamail01.actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 42,
+        "name" : "SFDCEndpoint",
+        "value" : "https://login.salesforce.com/services/Soap/u/42.0",
+        "encryptValue" : false
+      }, {
+        "id" : 43,
+        "name" : "SFDCUID",
+        "value" : "chris.gilson@actian.com.deved",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 44,
+        "name" : "SFDCPWD",
+        "value" : "Baozhenis#1BUnXSEXlO6rEU2ZfUQURodBD",
+        "encryptValue" : false
+      } ]
+    }
+  } ]
+}

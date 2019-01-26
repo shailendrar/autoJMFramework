@@ -1,0 +1,511 @@
+{
+  "macroSet" : [ {
+    "id" : 1,
+    "name" : "GLOBAL",
+    "macros" : {
+      "macro" : [ {
+        "id" : 1,
+        "name" : "TestData",
+        "value" : "/pvsrc/cmbuildsrc/workspace/dc.test-dev-glerch/test.data",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 2,
+        "name" : "SRC",
+        "value" : "$(TestData)/SOURCES",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 3,
+        "name" : "TRG",
+        "value" : "$(TestData)/TARGET",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 4,
+        "name" : "LogFolder",
+        "value" : "C:\\Users\\bzhang\\Actian\\DataConnect\\Logs",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 5,
+        "name" : "Schema",
+        "value" : "$(TestData)/Schemas",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 6,
+        "name" : "SQL",
+        "value" : "$(TestData)/SQL",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 7,
+        "name" : "Script",
+        "value" : "$(TestData)/Scripts",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 8,
+        "name" : "Workspace",
+        "value" : "$(TestData)",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 2,
+    "name" : "ORACRMOD",
+    "macros" : {
+      "macro" : [ {
+        "id" : 9,
+        "name" : "ORACRMODSRV",
+        "value" : "https://secure-ausomxapa.crmondemand.com",
+        "encryptValue" : false
+      }, {
+        "id" : 10,
+        "name" : "ORACRMODUID",
+        "value" : "pervasive\\glerch@pervasive.com",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 11,
+        "name" : "ORACRMODPWD",
+        "value" : "P@ssw0rd",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 3,
+    "name" : "Oracle12c",
+    "macros" : {
+      "macro" : [ {
+        "id" : 12,
+        "name" : "ORA12DBA",
+        "value" : "QADB7",
+        "encryptValue" : false
+      }, {
+        "id" : 13,
+        "name" : "ORA12UID",
+        "value" : "SCOTT",
+        "encryptValue" : false
+      }, {
+        "id" : 14,
+        "name" : "ORA12PWD",
+        "value" : "tiger",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 15,
+        "name" : "OraDriver",
+        "value" : "oracle.jdbc.driver.OracleDriver",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 16,
+        "name" : "OraURL",
+        "value" : "jdbc:oracle:thin:@qadb7:1521:QADB7",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 17,
+        "name" : "OraJDBCJar",
+        "value" : "$(SRC)/JDBC/Oracle",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 18,
+        "name" : "tbName",
+        "value" : "DCNG-9999",
+        "encryptValue" : false
+      } ]
+    }
+  }, {
+    "id" : 4,
+    "name" : "IBMDB2v10",
+    "macros" : {
+      "macro" : [ {
+        "id" : 19,
+        "name" : "DB2v10DBA",
+        "value" : "SAMPLE",
+        "encryptValue" : false
+      }, {
+        "id" : 20,
+        "name" : "DB2v10UID",
+        "value" : "qetester",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 21,
+        "name" : "DB2v10PWD",
+        "value" : "test800",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 5,
+    "name" : "SQL2016",
+    "macros" : {
+      "macro" : [ {
+        "id" : 22,
+        "name" : "SQL2016DBA",
+        "value" : "qadb8",
+        "encryptValue" : false
+      }, {
+        "id" : 23,
+        "name" : "SQL2016UID",
+        "value" : "qetester",
+        "encryptValue" : false
+      }, {
+        "id" : 24,
+        "name" : "SQL2016PWD",
+        "value" : "test800",
+        "encryptValue" : false
+      }, {
+        "id" : 25,
+        "name" : "SQL2016SVR",
+        "value" : "qadb8.actian.com",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 6,
+    "name" : "ODBC",
+    "macros" : {
+      "macro" : [ {
+        "id" : 26,
+        "name" : "ODBCDSN",
+        "value" : "odbcDEMODB",
+        "encryptValue" : false
+      }, {
+        "id" : 27,
+        "name" : "ODBCUID",
+        "value" : "qetester",
+        "encryptValue" : false
+      }, {
+        "id" : 28,
+        "name" : "ODBCPWD",
+        "value" : "test800",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 7,
+    "name" : "SFDC",
+    "macros" : {
+      "macro" : [ {
+        "id" : 29,
+        "name" : "SFDCEndpoint",
+        "value" : "https://login.salesforce.com/services/Soap/u/42.0",
+        "encryptValue" : false
+      }, {
+        "id" : 30,
+        "name" : "SFDCUID",
+        "value" : "chris.gilson@actian.com.deved",
+        "encryptValue" : false
+      }, {
+        "id" : 31,
+        "name" : "SFDCPWD",
+        "value" : "Baozhenis#1BUnXSEXlO6rEU2ZfUQURodBD",
+        "encryptValue" : false
+      } ]
+    }
+  }, {
+    "id" : 8,
+    "name" : "FTP",
+    "macros" : {
+      "macro" : [ {
+        "id" : 32,
+        "name" : "FTPServer",
+        "value" : "qadb2:21",
+        "encryptValue" : false
+      }, {
+        "id" : 33,
+        "name" : "FTPUserID",
+        "value" : "anonymous",
+        "encryptValue" : false
+      } ]
+    }
+  }, {
+    "id" : 9,
+    "name" : "Vector",
+    "macros" : {
+      "macro" : [ {
+        "id" : 34,
+        "name" : "Vector_Db",
+        "value" : "demodb",
+        "encryptValue" : false
+      }, {
+        "id" : 35,
+        "name" : "Vector_DSN",
+        "value" : "odbcDEMODB",
+        "encryptValue" : false
+      }, {
+        "id" : 36,
+        "name" : "Vector_User1",
+        "value" : "actian",
+        "encryptValue" : false
+      }, {
+        "id" : 37,
+        "name" : "Vector_Pwd1",
+        "value" : "actian",
+        "encryptValue" : false
+      }, {
+        "id" : 38,
+        "name" : "Vector_User2",
+        "value" : "qetester",
+        "encryptValue" : false
+      }, {
+        "id" : 39,
+        "name" : "Vector_Pwd2",
+        "value" : "test800",
+        "encryptValue" : false
+      } ]
+    }
+  }, {
+    "id" : 10,
+    "name" : "Email",
+    "macros" : {
+      "macro" : [ {
+        "id" : 40,
+        "name" : "EmailSVR",
+        "value" : "usau-qamail01.actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 41,
+        "name" : "EmailUID",
+        "value" : "qetester",
+        "encryptValue" : false
+      }, {
+        "id" : 42,
+        "name" : "EmailPWD",
+        "value" : "test800",
+        "encryptValue" : false
+      }, {
+        "id" : 43,
+        "name" : "EmailFROM",
+        "value" : "qetester@usau-qamail01.actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 44,
+        "name" : "EmailTO",
+        "value" : "qetester@usau-qamail01.actian.com",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 11,
+    "name" : "PSQL",
+    "macros" : {
+      "macro" : [ {
+        "id" : 45,
+        "name" : "PSQL_SVR",
+        "value" : "qadb5",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 46,
+        "name" : "PSQL_DSN",
+        "value" : "DEMODATA",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 12,
+    "name" : "MySQL",
+    "macros" : {
+      "macro" : [ {
+        "id" : 47,
+        "name" : "MySQL-DSN",
+        "value" : "Mysql",
+        "encryptValue" : false
+      }, {
+        "id" : 48,
+        "name" : "MySQL-uname",
+        "value" : "",
+        "encryptValue" : false
+      }, {
+        "id" : 49,
+        "name" : "MySQL-pwd",
+        "value" : "",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 50,
+        "name" : "Macro 1",
+        "encryptValue" : false
+      } ]
+    }
+  }, {
+    "id" : 13,
+    "name" : "Informix11",
+    "macros" : {
+      "macro" : [ {
+        "id" : 51,
+        "name" : "INFX11SRVR",
+        "value" : "ol_informix1170",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 52,
+        "name" : "INFX11UID",
+        "value" : "informix",
+        "encryptValue" : false
+      }, {
+        "id" : 53,
+        "name" : "INFX11PWD",
+        "value" : "pervasive",
+        "encryptValue" : false
+      }, {
+        "id" : 54,
+        "name" : "INFX11DS",
+        "value" : "Informixv11",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 14,
+    "name" : "Sybase",
+    "macros" : {
+      "macro" : [ {
+        "id" : 55,
+        "name" : "SYBSRVR",
+        "value" : "qadb5",
+        "encryptValue" : false
+      }, {
+        "id" : 56,
+        "name" : "SYBDB",
+        "value" : "pubs2",
+        "encryptValue" : false
+      }, {
+        "id" : 57,
+        "name" : "SYBUID",
+        "value" : "qetester",
+        "encryptValue" : false
+      }, {
+        "id" : 58,
+        "name" : "SYBPWD",
+        "value" : "test800",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 15,
+    "name" : "NetSuite2012",
+    "macros" : {
+      "macro" : [ {
+        "id" : 59,
+        "name" : "NetSuite2012Acc",
+        "value" : "TSTDRV1292219",
+        "encryptValue" : false
+      }, {
+        "id" : 60,
+        "name" : "NetSuite2012Email",
+        "value" : "chris.gilson@actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 61,
+        "name" : "NetSuite2012PWD",
+        "value" : "NetSuite20!5",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 16,
+    "name" : "NetSuite",
+    "macros" : {
+      "macro" : [ {
+        "id" : 62,
+        "name" : "NS_Account",
+        "value" : "TSTDRV1224770",
+        "encryptValue" : false
+      }, {
+        "id" : 63,
+        "name" : "NS_Email",
+        "value" : "Yimin.zhang@actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 64,
+        "name" : "NS_Password",
+        "value" : "Abcde12345",
+        "encryptValue" : false
+      }, {
+        "id" : 65,
+        "name" : "NS_ApplicationId",
+        "value" : "855108B1-4C82-44CA-B4A8-15783C652E18",
+        "encryptValue" : false
+      }, {
+        "id" : 66,
+        "name" : "NS_TokenId",
+        "value" : "caf532840656c9a0452b6ff60d9de355a446cfd787cf92f052a9473b09df5190",
+        "encryptValue" : false
+      }, {
+        "id" : 67,
+        "name" : "NS_TokenSecret",
+        "value" : "dcd85cf0c2b65bab3e10362d6274062f0ee205a80e0508050951d861f724d58b",
+        "encryptValue" : false
+      }, {
+        "id" : 68,
+        "name" : "NS_ConsumerKey",
+        "value" : "335bf4150cf181434a878f36025fdd053f71a7810a2d3ca358d391c17ccd24ac",
+        "encryptValue" : false
+      }, {
+        "id" : 69,
+        "name" : "NS_ConsumerSecret",
+        "value" : "82ecfb8fc36659edcff0fe79761ea61f02f2cc26d64844c519e8700fcd651c3d",
+        "encryptValue" : false
+      } ]
+    }
+  }, {
+    "id" : 17,
+    "name" : "JMS",
+    "macros" : {
+      "macro" : [ {
+        "id" : 70,
+        "name" : "JMS_URL",
+        "value" : "tcp://10.4.50.67:3035/",
+        "encryptValue" : false
+      }, {
+        "id" : 71,
+        "name" : "JMS_Home",
+        "value" : "C:/openjms-0.7.7-beta-1",
+        "encryptValue" : false
+      } ]
+    }
+  }, {
+    "id" : 18,
+    "name" : "DataFlow",
+    "macros" : {
+      "macro" : [ {
+        "id" : 72,
+        "name" : "DF_LOCATION",
+        "value" : "C:/Actian/actian-dataflow-6.6.0-108",
+        "encryptValue" : false
+      }, {
+        "id" : 73,
+        "name" : "DF_WORK_DIR",
+        "value" : "$(SRC)/DF_DATA",
+        "encryptValue" : false
+      }, {
+        "id" : 74,
+        "name" : "DF_OVERRIDE_TRG",
+        "value" : "$(SRC)/DF_DATA",
+        "encryptValue" : false
+      }, {
+        "id" : 75,
+        "name" : "DF_OVERRIDE_SRC",
+        "value" : "$(SRC)/DF_DATA",
+        "encryptValue" : false
+      } ]
+    }
+  } ]
+}
